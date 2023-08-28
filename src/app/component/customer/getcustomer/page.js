@@ -3,7 +3,7 @@ import "@/app/page.module.css"
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Customerbox from "./customerbox/page";
+
 
  function  GetCustomer() {
   const [customerName, setCustomerName] = useState('');
@@ -58,7 +58,7 @@ import Customerbox from "./customerbox/page";
           {customerList.map((customer, index) => (
             <li key={index} onClick={() => handleCustomerClick(customer,index)}>
                     
-                   <Link href={`/customer/${index}`} style={{outlineColor:"white" ,color:"black",textDecoration:"none" ,columnGap:"3rem" ,marginTop:"4px" }}> <Customerbox cust={{index,customer}}></Customerbox></Link>
+                   <Link href={`/customer/${index}`} style={{outlineColor:"white" ,color:"black",textDecoration:"none" ,columnGap:"3rem" ,marginTop:"4px" }}> {customer}</Link>
             </li>
           ))}
         </ul>
