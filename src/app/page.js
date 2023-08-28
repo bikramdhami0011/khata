@@ -1,95 +1,30 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+import "../app/page.module.css"
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  
+        <div className="container">
+          <section className="shop">
+            <h2>Welcome to Our Shop</h2>
+            <p>Explore our wide range of products and find something you love. From fashion and electronics to home decor and more, we have everything you need at competitive prices.</p>
+            <p>A shop or store is a place where people can go to buy items that they need or want. People might go to a shop to buy food, clothes, furniture, jewelry, or many other things. There are loads of shops in the world people can buy their things from.
+
+People might also go to a repair shop if something is broken, and they want the shop to fix it. For example, someone might bring a broken bicycle to a bicycle repair shop.
+
+Shops can be anything from large supermarket chains to small businesses.</p>
+          </section>
+          <section className="customer">
+            <h2>Our Valued Customers</h2>
+
+            <p>Discover what our customers are saying about their experiences. We take pride in serving our customers and providing top-notch service. Read testimonials and reviews from satisfied shoppers.</p>
+          </section>
+          <section className="customer-detail">
+            <h2>Customer Details</h2>
+            <p style={{overflow:"hidden"}}>Learn more about specific customers and their interactions with us. Each customer has a unique story, and we're here to share some of them with you. Get insights into their preferences, purchases, and feedback.</p>
+            <p>What is customer information? Name, phone number, email address, company address, orders and much more. These are customer information, that every company has to store to provide a perfect customer support. Companies can track different information about customers.</p>
+          </section>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      );
+   
+    
+  
 }
