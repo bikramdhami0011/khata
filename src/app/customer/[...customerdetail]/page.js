@@ -4,6 +4,7 @@ const Customer=({params})=>{
 
   return<div>
     <div> hello</div>
+    
   </div>
     
     }
