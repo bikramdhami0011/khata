@@ -52,7 +52,7 @@ const ContactPage = () => {
   return (
     <div> {/* Use the CSS module class */}
       <h1>Contact Us</h1>
-      <div className={styles.ContactPage} style={{ height: "300px", width: "400px" }}>
+      <div  style={{ height: "30vh", width: "50vw",marginLeft:"30vw"}}>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", justifyItems: "center", textAlign: "center", outline: "none" }}>
           <input type='text' placeholder='enter name' required onChange={(e) => {
             setname(e.target.value)

@@ -1,33 +1,54 @@
- "use client"
- import { useState } from "react";
-const Customers=()=>{
-    const [customerName, setCustomerName] = useState('');
-  
-    const handleInputChange = (event) => {
-      setCustomerName(event.target.value);
-    };
-    
-    const handleSave = () => {
-      if (customerName) {
-        localStorage.setItem('customerName', customerName);
-        alert('Customer name saved in local storage.');
-      } else {
-        alert('Please enter a customer name.');
-    }
-};
-    return <div>
-         <h1> this is customer</h1>
-         <div>
-      <h1>Customer</h1>
-      <input
-        type="text"
-        placeholder="Enter customer name"
-        value={customerName}
-        onChange={handleInputChange}
-      />
-    <button onClick={handleSave} style={{backgroundColor:"blue"}}>Save </button>
-    </div>
+"use client"
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
+const CustomerLocalStorage = () => {
+  const [customerName, setCustomerName] = useState('');
+  const [customerList, setCustomerList] = useState([]);
+
+  // Load data from localStorage on initial render
+  useEffect(() => {
+    const storedCustomerList = localStorage.getItem('customerList');
+    if (storedCustomerList) {
+      setCustomerList(JSON.parse(storedCustomerList));
+    }
+  }, []);
+
+  // Save data to localStorage whenever customerList changes
+  useEffect(() => {
+    localStorage.setItem('customerList', JSON.stringify(customerList));
+  }, [customerList]);
+
+  const addCustomer = () => {
+    if (customerName.trim() !== '') {
+      setCustomerList([...customerList, customerName]);
+      setCustomerName('');
+    }
+  };
+
+  return (
+    <div>
+      <h1>Customer List</h1>
+      <div>
+        <input
+          type="text"
+          value={customerName}
+          onChange={(e) => setCustomerName(e.target.value)}
+        />
+        <button onClick={addCustomer}>Add Customer</button>
+      </div>
+      <ul>
+        {customerList.map((name, index) => (
+          
+           <div> 
+              {/* <li key={index}>{name}</li> */}
+              <Link href={`./../component/customer/custlocalstore/${name}`}> {name}</Link>
+           </div>
+        
+        ))}
+      </ul>
     </div>
-}
-export default Customers;
+  );
+};
+
+export default CustomerLocalStorage;

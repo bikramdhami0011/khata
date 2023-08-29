@@ -1,8 +1,10 @@
+
 import "../app/page.module.css"
+
 export default function Home() {
   return (
   
-        <div className="container">
+        <div className="shopcontainer" >
           <section className="shop">
             <h2>Welcome to Our Shop</h2>
             <p>Explore our wide range of products and find something you love. From fashion and electronics to home decor and more, we have everything you need at competitive prices.</p>
@@ -22,6 +24,7 @@ Shops can be anything from large supermarket chains to small businesses.</p>
             <p style={{overflow:"hidden"}}>Learn more about specific customers and their interactions with us. Each customer has a unique story, and we're here to share some of them with you. Get insights into their preferences, purchases, and feedback.</p>
             <p>What is customer information? Name, phone number, email address, company address, orders and much more. These are customer information, that every company has to store to provide a perfect customer support. Companies can track different information about customers.</p>
           </section>
+          
         </div>
       );
    

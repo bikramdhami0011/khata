@@ -7,7 +7,7 @@ const Navbar=()=>{
     const router=useRouter();
     return <div>
          
-          <div className="Navbar"  style={{ display:"flex" , backgroundColor:"rgb(52,53,65)" ,textDecoration:"none" ,textAnchor:"start"  ,height:"4rem" ,justifyContent:"center" ,justifyItems:"center",color:"white" ,position:"sticky"}}>
+          <div className="Navbar"  style={{ display:"flex" , backgroundColor:"rgb(1,135,95)",textDecoration:"none" ,textAnchor:"start"  ,height:"4rem" ,justifyContent:"center" ,justifyItems:"center",color:"white" ,position:"sticky"}}>
               
                  <ul  style={{display:"flex" ,flexDirection:"row",gap:"4rem" ,listStyleType:"none" ,justifyContent:"center" , justifyItems:"center",marginTop:"1rem"}}>
                     
@@ -19,7 +19,7 @@ const Navbar=()=>{
                         Shop
                      </li>
                      <li onClick={()=>{
-                          router.push("/customer")
+                          router.push("../component/customer")
                      }}  style={{cursor:"pointer"}}> 
                         Customer
                      </li>

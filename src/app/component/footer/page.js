@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import Link from 'next/link';
+
 import { FaFacebook, FaYoutube } from 'react-icons/fa';
-import "@/app/component/page.module.css"
+
 import { useRouter } from "next/navigation";
 const Privacy = () => {
     const router=useRouter()
@@ -27,7 +27,7 @@ const Privacy = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer__bottom" style={{ display: "flex", backgroundColor: "rgb(52,53,65)", color: "white", height: "4rem", justifyContent: "center", alignItems: "center" ,marginTop:"4vh"}}>
+            <div className="footer__bottom" style={{ display: "flex", backgroundColor: "rgb(1,135,95)", color: "white", height: "4rem", justifyContent: "center", alignItems: "center" ,marginTop:"4vh"}}>
                 <div className="copyright">
                     &copy; {new Date().getFullYear()} Your Company. All rights reserved.
                 </div>

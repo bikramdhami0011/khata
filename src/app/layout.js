@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
        <Navbar></Navbar>
       {children}</body>
 
-<Footer ></Footer>
+      <footer style={{marginBottom:"0px",marginTop:"21rem"}}><Footer ></Footer></footer>
 
     </html>
   )
